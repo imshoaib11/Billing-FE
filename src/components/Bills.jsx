@@ -5,6 +5,7 @@ import ApiRoutes from '../utils/ApiRoutes';
 import toast from 'react-hot-toast';
 import Loader from './Loader'
 import {Tabs} from 'antd';
+import {useNavigate} from 'react-router-dom';
 
 function Bills() {
     const {TabPane} = Tabs;
@@ -61,6 +62,7 @@ export function NewBills(){
       let [loading,setLoading] = useState(false)
       let [error,setError] = useState(false)
       let[errMsg, seterrMsg] = useState("")
+      let navigate = useNavigate()
 
       const sendPayment = async () => {
         try{
@@ -73,7 +75,8 @@ export function NewBills(){
                 totalAmount
               })
               toast.success(message)
-              window.location.reload()
+              navigate('/bills')
+              
         }
         catch(error){
             console.log(error)
@@ -124,9 +127,7 @@ export function NewBills(){
             </div>
             
        </div>
-       {bill.length > 0 &&
-        (
-            <>
+       
            <div style={{marginLeft:"50px"}} className='col-md-5 bs2'>
                 <h2 className='text-center font-clr mt-2'>Previous Bill</h2>
                 <hr className="font-clr"/>
@@ -137,10 +138,6 @@ export function NewBills(){
                 <b><p style={{fontSize:"22px"}}className='font-clr'>Time: {bill.billTime}</p></b>
 
             </div>
-            </>
-        )
-
-        }
         
         
     </div>
