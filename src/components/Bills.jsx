@@ -100,6 +100,7 @@ export function NewBills(){
     },[])
 
     return <>
+        
         <div  style={{backgroundColor:"black"}}className='row'>
             <div style={{marginLeft:"20px"}} className='col-md-5 bs'>
                 <div className="mb-3">
@@ -123,8 +124,10 @@ export function NewBills(){
             </div>
             
        </div>
-       {loading?(<Loader/>):
-       <div style={{marginLeft:"50px"}} className='col-md-5 bs2'>
+       {bill.length > 0 &&
+        (
+            <>
+           <div style={{marginLeft:"50px"}} className='col-md-5 bs2'>
                 <h2 className='text-center font-clr mt-2'>Previous Bill</h2>
                 <hr className="font-clr"/>
                 <b><p style={{fontSize:"22px"}}className='font-clr'>Bill No: {bill.billNo}</p></b>
@@ -133,7 +136,10 @@ export function NewBills(){
                 <b><p style={{fontSize:"22px"}}className='font-clr'>CASH: {bill.cash}</p></b>
                 <b><p style={{fontSize:"22px"}}className='font-clr'>Time: {bill.billTime}</p></b>
 
-        </div>
+            </div>
+            </>
+        )
+
         }
         
         
