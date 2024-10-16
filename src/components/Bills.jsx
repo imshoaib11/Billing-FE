@@ -103,9 +103,9 @@ export function NewBills(){
     },[])
 
     return <>
-        
+        <form>
         <div  style={{backgroundColor:"black"}}className='row'>
-            <form>
+            
                  <div style={{marginLeft:"20px"}} className='col-md-5 bs'>
                 <div className="mb-3">
                     <label  className="form-label">DATE</label>
@@ -126,11 +126,10 @@ export function NewBills(){
                 <button  style={{width:"30%"}}className="btn btn-success mt-3" onClick={()=>sendPayment()}>PAY</button>
                 </div>
             
-            </div>
-            </form>
-           
+            </div> 
             
        </div>
+            </form>
        
            <div style={{marginLeft:"50px"}} className='col-md-5 bs2'>
                 <h2 className='text-center font-clr mt-2'>Previous Bill</h2>
