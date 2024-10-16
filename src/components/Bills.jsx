@@ -125,9 +125,9 @@ export function NewBills(){
                 <div className="mb-3">
                 <button  style={{width:"30%"}}className="btn btn-success mt-3" onClick={()=>sendPayment()}>PAY</button>
                 </div>
-            </form>
-            </div>
             
+            </div>
+            </form>
            
             
        </div>
