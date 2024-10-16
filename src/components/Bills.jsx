@@ -105,7 +105,8 @@ export function NewBills(){
     return <>
         
         <div  style={{backgroundColor:"black"}}className='row'>
-            <div style={{marginLeft:"20px"}} className='col-md-5 bs'>
+            <form>
+                 <div style={{marginLeft:"20px"}} className='col-md-5 bs'>
                 <div className="mb-3">
                     <label  className="form-label">DATE</label>
                     <input type="text" className="form-control ip-width" value={billDate} aria-label="Disabled input example" disabled/>
@@ -125,6 +126,8 @@ export function NewBills(){
                 <button  style={{width:"30%"}}className="btn btn-success mt-3" onClick={()=>sendPayment()}>PAY</button>
                 </div>
             </div>
+            </form>
+           
             
        </div>
        
