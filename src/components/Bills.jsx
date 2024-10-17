@@ -76,6 +76,8 @@ export function NewBills(){
               })
               toast.success(message)
               navigate('/bills')
+              setGpay("")
+              setCash("")
               
         }
         catch(error){
