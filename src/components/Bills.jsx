@@ -103,10 +103,11 @@ export function NewBills(){
     },[])
 
     return <>
-        <form>
+        
         <div  style={{backgroundColor:"black"}}className='row'>
             
                  <div style={{marginLeft:"20px"}} className='col-md-5 bs'>
+                <form>
                 <div className="mb-3">
                     <label  className="form-label">DATE</label>
                     <input type="text" className="form-control ip-width" value={billDate} aria-label="Disabled input example" disabled/>
@@ -122,14 +123,14 @@ export function NewBills(){
                 <div className="mb-3">
                     <label  className="form-label">TOTAL</label>
                     <input style={{marginLeft:"10px"}}type="text" className="form-control-lg" value={totalAmount} aria-label="0" placeholder="0" disabled/>
+                </div> 
                 <div className="mb-3">
                 <button  style={{width:"30%"}}className="btn btn-success mt-3" onClick={()=>sendPayment()}>PAY</button>
                 </div>
-            
-            </div> 
-            
-       </div>
-            </form>
+                 </form>
+                    
+            </div>
+           
        
            <div style={{marginLeft:"50px"}} className='col-md-5 bs2'>
                 <h2 className='text-center font-clr mt-2'>Previous Bill</h2>
